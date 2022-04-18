@@ -1,0 +1,42 @@
+server:
+  port: 5000
+
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.153.130:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+          lowerCaseServiceId: true
+      routes:
+        - id: provider
+          uri: lb://cloud-gateway-provider
+          predicates:
+            - Path=/provider/**
+          filters:
+            - StripPrefix=1
+        - id: consumer
+          uri: lb://cloud-gateway-consumer
+          predicates:
+            - Path=/consumer/**
+          filters:
+            - StripPrefix=1
+        - id: user
+          uri: lb://user-service
+          predicates:
+            - Path=/api/user/**
+          filters:
+            - StripPrefix=1
+    sentinel:
+      transport:
+        port: 15000
+        dashboard: 192.168.153.130:8748
+  main:
+    allow-bean-definition-overriding: true
+
+

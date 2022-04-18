@@ -1,0 +1,15 @@
+server:
+  port: 8999
+spring:
+  application:
+    name: cloud-alibb-nacos-config
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.153.130:8848
+        file-extension: yaml
+        prefix: nacos-consumer
+      discovery:
+        server-addr: 192.168.153.130:8848
+  profiles:
+    active: dev

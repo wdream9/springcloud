@@ -1,0 +1,17 @@
+server:
+  port: 20889
+spring:
+  application:
+    name: cloud-zuul-router
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.153.130:8848
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: cloud-nacos-consumer
+    api-b:
+      path: /api-b/**
+      serviceId: cloud-nacos-provider

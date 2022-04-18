@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloud-gateway-provider" />
+        <module name="cloud-nacos-consumer" />
+        <module name="cloud-dubbo-student-consumer" />
+        <module name="cloud-alibb-nacos-config" />
+        <module name="cloud-zuul-router" />
+        <module name="cloud-dubbo-api-interface" />
+        <module name="cloud-nacos-provider" />
+        <module name="cloud-dubbo-student-provider" />
+        <module name="cloud-commons" />
+        <module name="cloud-gateway" />
+        <module name="cloud-gateway-consumer" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="albb-nacos-server" target="11" />
+      <module name="cloud-geteway" target="1.8" />
+      <module name="cloud-nacos-config" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="albb-nacos-server" options="-parameters" />
+      <module name="cloud-alibb-nacos-config" options="-parameters" />
+      <module name="cloud-commons" options="-parameters" />
+      <module name="cloud-dubbo-api-interface" options="-parameters" />
+      <module name="cloud-dubbo-student-consumer" options="-parameters" />
+      <module name="cloud-dubbo-student-provider" options="-parameters" />
+      <module name="cloud-gateway" options="-parameters" />
+      <module name="cloud-gateway-consumer" options="-parameters" />
+      <module name="cloud-gateway-provider" options="-parameters" />
+      <module name="cloud-geteway" options="-parameters" />
+      <module name="cloud-nacos-config" options="-parameters" />
+      <module name="cloud-nacos-consumer" options="-parameters" />
+      <module name="cloud-nacos-provider" options="-parameters" />
+      <module name="cloud-zuul-router" options="-parameters" />
+      <module name="spring-cloud-alibaba-main-project" options="-parameters" />
+    </option>
+  </component>
+</project>

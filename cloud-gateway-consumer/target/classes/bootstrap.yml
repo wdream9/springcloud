@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    sentinel:
+      transport:
+        port: 18763
+        dashboard: 192.168.153.130:8748
+
+feign:
+  sentinel:
+    enabled: true

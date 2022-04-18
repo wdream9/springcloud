@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: cloud-nacos-provider
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.153.130:8848
+        file-extension: yaml
+        prefix: nacos-consumer
+
+  profiles:
+    active: dev
+  zipkin:
+    base-url: http://localhost:9411
+feign:
+  httpclient:
+    enabled: true  # 开启httpclient
+    max-connections: 200 # 连接池中的数目
+    max-connections-per-route: 50  # 每条路径的组大连接数
