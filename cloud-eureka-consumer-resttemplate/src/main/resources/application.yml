@@ -1,0 +1,12 @@
+server:
+  port: 8882
+
+spring:
+  application:
+    name: cloud-eureka-consumer-resttemplate
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8880/eureka/
+

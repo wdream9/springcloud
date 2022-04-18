@@ -1,0 +1,20 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8880/eureka/
+server:
+  port: 8884
+spring:
+  application:
+    name: cloud-eureka-zuul
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: cloud-eureka-consumer-feign
+    api-b:
+      path: /api-b/**
+      serviceId: cloud-eureka-consumer-resttemplate
+
+
+
